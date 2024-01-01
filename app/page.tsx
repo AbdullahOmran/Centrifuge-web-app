@@ -1,9 +1,11 @@
 import styles from './page.module.css'
 
-export default function Home() {
+ function Home() {
   return (
     <main className={styles.main}>
       Hello
     </main>
   )
 }
+
+export default Home;
