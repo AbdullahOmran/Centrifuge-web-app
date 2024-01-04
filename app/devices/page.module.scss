@@ -1,0 +1,103 @@
+@import '../variables.scss';
+
+$gradient_color:(#111,#222);
+
+
+.main{
+    padding: 10px;
+    margin: 0;
+    background:linear-gradient($gradient_color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    //font-family: sourcesan;
+}
+
+.card{
+    background-color: $secondary-color;
+    cursor: pointer; 
+    color: $white;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.card:hover{
+    background-color: $primary-color;
+}
+.menu{
+    background-color: $tertiary-color;
+    flex-basis: 300px;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+}
+.items{
+    list-style: none;
+    padding: 0;
+    position: relative;
+    height: 95%;
+   
+}
+.item{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-radius:8px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 260px;
+    transition: 0.5s;
+}
+
+.itemText{
+    margin: 0;
+}
+
+
+.item:hover{
+background-color: #ffffff55;
+}
+.active{
+    background-color: #ffffff55;
+}
+.logOut{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.logOutItem{
+    background-color: $primary-color;
+}
+.icon{
+    font-size: 30px;
+}
+
+.logo{
+    position: relative;
+    height: 100px;
+}
+.imgBox{
+ position: absolute;
+ top: -50px;
+}
+.logoText{
+    margin-top: 40px;
+}
+.container{
+    background-color: $tertiary-color;
+    height: 100%;
+    flex-grow: 1;
+    border-radius: 8px;
+    padding: 20px 15px;
+   overflow-y: auto;
+}
+.viewListIcon{
+    font-size: 40px;
+}
+.openfileIcon{
+    font-size: 18px;
+    margin-right: 5px;
+}
