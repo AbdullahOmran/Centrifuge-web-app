@@ -62,7 +62,7 @@ function Devices() {
   };
   const handleParser = () => {
     if (data != "") {
-      const res = Papa.parse(data).data;
+      const res: any = Papa.parse(data).data;
       setRecords(res);
     }
   };
