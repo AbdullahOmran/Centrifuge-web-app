@@ -34,13 +34,26 @@ function Devices() {
   const [active,setActive] = useState([true,false,false]);
   const [showPatientModal, setShowPatientModal] = useState(false);
   const handleClosePatientModal= () => setShowPatientModal(false);
-  
+  const [is_delete, setIsDelete] = useState(true);
+
+  const handleCloseCard = (event: any)=> {
+    
+    const key = event.currentTarget.getAttribute('btn-key');
+    records.splice(key,1);
+    setRecords(records);
+    setIsDelete(true);
+  };
   const [currentPatient, setCurrentPatient] = useState([]);
 
   const handleShowPatientModal = (event: any) => {
+   if(!is_delete){
     const key = event.currentTarget.getAttribute('card-key');
     setCurrentPatient(records[key]);
     setShowPatientModal(true);
+    
+   }else{
+    setIsDelete(false);
+   }
   };
   const handleReader = () => {
     readData(path).then((text) => {
@@ -136,7 +149,7 @@ function Devices() {
               </Button>
 
               <Button
-                style={{ display: "none" }}
+                style={{ visibility: "hidden" }}
                 className="p-1 ms-auto"
                 variant="primary"
               >
@@ -146,7 +159,7 @@ function Devices() {
               </Button>
 
               <Button
-                style={{ display: "none" }}
+                style={{ visibility: "hidden" }}
                 className="p-1"
                 variant="primary"
               >
@@ -155,12 +168,12 @@ function Devices() {
                 <span className="visually-hidden">unread messages</span>
               </Button>
               <Button
-                style={{ display: "none" }}
+                
                 className="p-1"
                 variant="primary"
               >
-                <BsCheckCircle className={styles.icon} />
-                btn
+                <BsPlusCircle className={clsx({[styles.icon]:true,[styles.openfileIcon]:true})} />
+                 Add Card
                 <span className="visually-hidden">unread messages</span>
               </Button>
             </Stack>
@@ -183,7 +196,7 @@ function Devices() {
                     [styles.card]: true,
                   })}
                 >
-                  <CloseButton className="position-absolute end-0 p-2" />
+                  <CloseButton btn-key = {idx} onClick={handleCloseCard} className="position-absolute end-0 p-2" />
                   <Card.Img variant="top" src="/images/drug_img.jpg" />
                   <Card.Body>
                     <Card.Title>{records[idx][0]}</Card.Title>

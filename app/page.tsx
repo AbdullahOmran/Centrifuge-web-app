@@ -11,22 +11,23 @@ function Home() {
         <div className={styles.container}>
           <nav className={styles.nav}>
             <a href="#" className={styles.logo}>
-              LOGO
+                Centrifuge
             </a>
+
             <ul>
               <li className={styles.navItem}>
                 <a href="#" className={styles.itemText}>
-                  Item1
+                  Cairo
                 </a>
               </li>
               <li className={styles.navItem}>
                 <a href="#" className={styles.itemText}>
-                  Item2
+                  6th-October
                 </a>
               </li>
               <li className={styles.navItem}>
                 <a href="#" className={styles.itemText}>
-                  Item3
+                  Mansoura
                 </a>
               </li>
             </ul>
@@ -34,12 +35,11 @@ function Home() {
           <div className={styles.content}>
             <div className={styles.text}>
               <h2 className={styles.heading}>
-                Heading <br></br> ASG
+                Eng. Amira <br></br> Labs
               </h2>
               <p className={styles.paragraph}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                repellat explicabo quas atque, distinctio impedit?
-              </p>
+                Your Fast check,  result  Trust gained over 50 years of experience.
+                              </p>
               <Button variant="outline-primary">
                 <Link className={styles.startBtn} href="/devices/">
                   Start&nbsp;&nbsp;
