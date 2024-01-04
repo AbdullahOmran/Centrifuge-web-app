@@ -13,7 +13,7 @@ $gradient_color:(#111,#222);
     align-items: center;
     gap: 10px;
     overflow: hidden;
-    //font-family: sourcesan;
+    font-family: "Dubai";
 }
 
 .card{
@@ -44,12 +44,13 @@ $gradient_color:(#111,#222);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
     border-radius:8px;
     padding: 10px;
     margin: 10px 0;
     width: 260px;
     transition: 0.5s;
+    letter-spacing: 2px;
 }
 
 .itemText{
@@ -96,6 +97,7 @@ background-color: #ffffff55;
 }
 .viewListIcon{
     font-size: 40px;
+    margin-right: 5px;
 }
 .openfileIcon{
     font-size: 18px;

@@ -108,19 +108,19 @@ function Devices() {
               onClick={handleDevice1}
             >
               <FaMicroscope className={styles.icon} />
-              <p className={styles.itemText}>Device1</p>
+              <p className={styles.itemText}>ESR-15304</p>
             </Link>
           </li>
           <li>
             <Link href="#"  onClick={handleDevice2} className={clsx({ [styles.item]: true, [styles.active]: active[1] })}>
               <FaMicroscope className={styles.icon}></FaMicroscope>
-              <p className={styles.itemText}>Device2</p>
+              <p className={styles.itemText}>Mindray-15307</p>
             </Link>
           </li>
           <li>
             <Link href="#"  onClick={handleDevice3} className={clsx({ [styles.item]: true, [styles.active]: active[2] })}>
               <FaMicroscope className={styles.icon}></FaMicroscope>
-              <p className={styles.itemText}>Device3</p>
+              <p className={styles.itemText}>Abbott-15300</p>
             </Link>
           </li>
           <li className={clsx({ [styles.logOut]: true })}>
@@ -181,7 +181,7 @@ function Devices() {
           <Row className="mb-1">
             <h3 className={styles.header}>
               <CiViewList className={styles.viewListIcon} />
-              Patients List
+              Visitors List
             </h3>
           </Row>
           <Row xl={4} md={2} className="g-3">
@@ -195,6 +195,8 @@ function Devices() {
                     "position-relative": true,
                     [styles.card]: true,
                   })}
+                  
+                  
                 >
                   <CloseButton btn-key = {idx} onClick={handleCloseCard} className="position-absolute end-0 p-2" />
                   <Card.Img variant="top" src="/images/drug_img.jpg" />

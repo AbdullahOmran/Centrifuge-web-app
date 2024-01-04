@@ -15,9 +15,12 @@ function PatientModal({
   handleClose: any;
   patient: Array<string>;
 }) {
-    const header = ['Name','Age','Blood Type','Donor / Patient','Date and Time','RBC','WBC',
+    const header = ['Name','Age','Blood Type','Type','Date and Time','RBC','WBC',
     'Hematorcit','Plasma Volume','Hemoglobin','Platelet Count','Blood Pressure',
     'Cholesterol Level','Glucose Level', 'BMI'];
+    const units = ['',' years','','','',' million cells/uL',' cells/uL',
+    ' %',' mL','',' /uL',' mmHg',
+    ' mg/dL',' mg/dL', ''];
   return (
     <Modal className="text-black" size = "lg" show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -29,25 +32,27 @@ function PatientModal({
         {
            Array.from({ length: 7}).map((_, idx) => (
             <p key={idx}>
-             {header[idx]} : {patient[idx]}     
+             <FaDroplet style = {{color:"#dd1e3d", marginRight:"5px"}}/>{header[idx]} : {patient[idx]+units[idx]}     
             </p>
            ))
         }
+        
         </Col>
         <Col>
         {
            Array.from({ length: 8}).map((_, idx) => (
             <p key={7+idx}>
-             {header[7+idx]} : {patient[7+idx]}     
+             <FaDroplet style = {{color:"#dd1e3d", marginRight:"5px"}}/>{header[7+idx]} : {patient[7+idx]+units[7+idx]}     
             </p>
            ))
         }
         </Col>
         </Row>
         
-       
+        {patient[3] == "Patient" ? <p style = {{textAlign:"center", fontWeight:"500", fontSize:"18px"}}>الف سلامة</p>:<p style = {{textAlign:"center", fontWeight:"500", fontSize:"18px"}}>كتر خيرك</p>}
       </Modal.Body>
       <Modal.Footer>
+      
         <Button variant="primary" onClick={handleClose}>
           Close
         </Button>

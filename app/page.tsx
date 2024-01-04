@@ -38,7 +38,7 @@ function Home() {
                 Eng. Amira <br></br> Labs
               </h2>
               <p className={styles.paragraph}>
-                Your Fast check,  result  Trust gained over 50 years of experience.
+                Trust gained over 20 years of experience.
                               </p>
               <Button variant="outline-primary">
                 <Link className={styles.startBtn} href="/devices/">
